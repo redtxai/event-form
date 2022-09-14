@@ -16,7 +16,7 @@ For this task, the investigation part is about to look on the Tailwind UI docume
 
 SMS means **S**tate **M**anagement and **S**ervices. These tasks will be responsible to configured any State Management(if needed) and the services layer, such as the communication and configuration of the JSON server(if we have time). Also, these tasks will be responsible for the routing.
 
-The json server is a very useful library that allow us to create a simple backend that can run locally and simualtes an RESTFUL API.
+The json server is a very useful library that allow us to create a simple backend that can run locally and simulates a RESTFUL API.
 More info: https://github.com/typicode/json-server
 
 ### **Tests** 
