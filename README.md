@@ -6,7 +6,9 @@ The project will start with the separation of the tasks. We'll have three main k
 
 ### **Micro Components**
 
-Consist in the investigation and creation of the unit components that will be added on the Pages/Forms that will allow the user interact with the applications. Examples: Event Name Input(Figma), Where switch(?)/checkbox(?) component(Figma), When component, URL input, buttons, etc.
+Consist in the investigation(see below) and creation of the unit components that will be added on the Pages/Forms that will allow the user interact with the applications. Examples: Event Name Input(Figma), Where switch(?)/checkbox(?) component(Figma), When component, URL input, buttons, etc.
+
+For this task, the investigation part is about to look on the Tailwind UI documentation(components available) and make sure that we already have something there that we can use for the creation of the micro component.
 
 ### **SMS tasks**
 
