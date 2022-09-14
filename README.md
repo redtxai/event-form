@@ -10,7 +10,7 @@ Consist in the investigation and creation of the unit components that will be ad
 
 ### **SMS tasks**
 
-SMS means **S**tate **M**anagement and **S**ervices**. These tasks will be responsible to configured any State Management(if needed) and the services layer, such as the communication and configuration of the JSON server(if we have time). Also, these tasks will be responsible for the routing.
+SMS means **S**tate **M**anagement and **S**ervices. These tasks will be responsible to configured any State Management(if needed) and the services layer, such as the communication and configuration of the JSON server(if we have time). Also, these tasks will be responsible for the routing.
 
 ### **Tests** 
 
