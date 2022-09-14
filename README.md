@@ -2,7 +2,9 @@
 
 ## **Begining**
 
-The project will start with the separation of the tasks. We'll have three main kind of tasks: **Micro Components**, **SMS tasks**, **Tests** and **Pages and Form**
+The project will start with the separation of the tasks. We have two parts of the project: Event Form and Landpage. In the Event Form project we'll have three main kind of tasks: **Micro Components**, **SMS tasks**, **Tests** and **Pages and Form**
+
+Regarding the Landpage, I'll leave a task called Landpage tasks and initialization that will be responsible to create the Landpage backbone and then create the tasks.
 
 ### **Micro Components**
 
@@ -13,6 +15,9 @@ For this task, the investigation part is about to look on the Tailwind UI docume
 ### **SMS tasks**
 
 SMS means **S**tate **M**anagement and **S**ervices. These tasks will be responsible to configured any State Management(if needed) and the services layer, such as the communication and configuration of the JSON server(if we have time). Also, these tasks will be responsible for the routing.
+
+The json server is a very useful library that allow us to create a simple backend that can run locally and simualtes an RESTFUL API.
+More info: https://github.com/typicode/json-server
 
 ### **Tests** 
 
