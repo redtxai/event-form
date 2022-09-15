@@ -24,7 +24,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build:styles": "postcss src/tailwind.css -o src/styles.css", 
+    "prebuild": "yarn build:styles",
+    "prestart": "yarn build:styles"
   },
   "eslintConfig": {
     "extends": [
@@ -48,6 +51,7 @@
     "@tailwindcss/forms": "^0.5.3",
     "autoprefixer": "^10.4.11",
     "postcss": "^8.4.16",
+    "postcss-cli": "^10.0.0",
     "tailwindcss": "^3.1.8"
   }
 }
