@@ -10,7 +10,6 @@ function OnboardingIllustration({ type, onClick }: OnboardingIllustrationProps) 
   const [selected, setSelected] = useState(false);
 
   const handleClick = () => {
-    console.log(selected)
     setSelected(!selected)
     if (onClick) {
       onClick()
