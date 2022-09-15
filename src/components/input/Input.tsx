@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ChangeEventHandler } from 'react';
 
 type InputProps = {
   id?: string,
@@ -6,10 +6,12 @@ type InputProps = {
   placeholder?: string
   autoComplete?: string
   className?: string
-  type?: string
+  type?: string // // in order to expand the system features, this could assume any types listed on the HTMLInputTypeAttribute.
+  value?: string // as mentioned above, this property also would assume different types.
+  onChange?: ChangeEventHandler<HTMLInputElement>
 }
 
-function Input({ id, name, placeholder, className, autoComplete, type = 'text' }: InputProps) {
+function Input({ id, name, placeholder, className, autoComplete, type = 'text', value, onChange }: InputProps) {
   return (
     <input
       type={type}
@@ -29,11 +31,12 @@ function Input({ id, name, placeholder, className, autoComplete, type = 'text' }
         px-5
         placeholder:text-slate-450
         focus:input-placeholder
-        focus:test-txai
       focus:border-indigo-500
       focus:ring-indigo-500
         sm:max-w-xs
         ${className ? className : ''}`}
+        value={value || undefined}
+        onChange={onChange || undefined}
     />
   )
 }
