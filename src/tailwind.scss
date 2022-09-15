@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-slate-450 {
+    color: #8D9CAE;
+  }
+  
+  .grey-shade-2 {
+    color: #687387;
+  }
+  
+  .tightish {
+    letter-spacing: -0.24px;
+  }
+  
+  .text-sm-intermediate {
+    font-size: 15px;
+  }
+  
+  .leading-4-05 {
+    line-height: 18px;
+  }
+  
+  .border-gray-150 {
+    border: 1px solid #E6E8EC
+  }
+}
