@@ -10,6 +10,14 @@
   .grey-shade-2 {
     color: #687387;
   }
+
+  .text-gray-450 {
+    color: #8594AA;
+  }
+
+  .text-blue-950 {
+    color: #1D2839;
+  }
   
   .tightish {
     letter-spacing: -0.24px;
@@ -25,5 +33,17 @@
   
   .border-gray-150 {
     border: 1px solid #E6E8EC
+  }
+
+  .border-slate-175 {
+    border-color: #E3E5E9;
+  }
+
+  .pb-7-5 {
+    padding-bottom: 1.875em;
+  }
+
+  .max-w-xxs {
+    max-width: 11em;
   }
 }
