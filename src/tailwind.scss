@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 @layer utilities {
+
+  /** COLORS **/
   .text-slate-450 {
     color: #8D9CAE;
   }
@@ -18,19 +20,31 @@
   .text-blue-950 {
     color: #1D2839;
   }
-  
-  .tightish {
-    letter-spacing: -0.24px;
-  }
-  
+
+  /** FONT SIZE **/
   .text-sm-intermediate {
     font-size: 15px;
   }
+
+  .text-4xl-intermediate {
+    font-size: 2.5em;
+  }
   
+  /** LETTER SPACING **/
+  .tightish {
+    letter-spacing: -0.24px;
+  }
+
+  .tracking-widestish {
+    letter-spacing: 0.019em;
+  }
+  
+  /** LINE HEIGHT **/
   .leading-4-05 {
     line-height: 18px;
   }
   
+  /** BORDER COLOR **/
   .border-gray-150 {
     border: 1px solid #E6E8EC
   }
@@ -39,10 +53,12 @@
     border-color: #E3E5E9;
   }
 
+  /** PADDING **/
   .pb-7-5 {
     padding-bottom: 1.875em;
   }
 
+  /** MAX WIDTH **/
   .max-w-xxs {
     max-width: 11em;
   }
