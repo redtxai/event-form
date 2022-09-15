@@ -12,14 +12,14 @@ module.exports = {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
 
-      // customization not working \/
+      // TODO: #16 - customization not working \/ 
       colors: {
       'regal-blue': '#243c5a',
       },
       letterSpacing: {
         tightish: '-.015em',
       },
-      // customization not working /\
+      // TODO: #16 - customization not working /\
       
     },
   },
