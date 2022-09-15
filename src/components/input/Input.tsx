@@ -20,7 +20,6 @@ function Input({ id, name, placeholder, className, autoComplete, type = 'text', 
       placeholder={placeholder}
       autoComplete={autoComplete}
       className={`
-        input-base-custom-style
         font-normal
         text-sm-intermediate
         tracking-tightish
@@ -31,7 +30,6 @@ function Input({ id, name, placeholder, className, autoComplete, type = 'text', 
         py-2.5
         px-5
         placeholder:text-slate-450
-        focus:input-placeholder
       focus:border-indigo-500
       focus:ring-indigo-500
         sm:max-w-xs
