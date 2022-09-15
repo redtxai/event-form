@@ -1,4 +1,4 @@
-import React, { ChangeEventHandler } from 'react';
+import { ChangeEventHandler } from 'react';
 
 type InputProps = {
   id?: string,
@@ -23,7 +23,8 @@ function Input({ id, name, placeholder, className, autoComplete, type = 'text', 
         input-base-custom-style
         font-normal
         text-sm-intermediate
-        tightish
+        tracking-tightish
+        border
         border-gray-150
         shadow-sm
         rounded-md

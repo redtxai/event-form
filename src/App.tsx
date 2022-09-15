@@ -1,5 +1,3 @@
-import React from 'react';
-
 import './App.css';
 import Input from './components/input/Input';
 import Label from './components/label/Label';
