@@ -1,6 +1,6 @@
 import { ChangeEventHandler } from 'react';
 
-type InputProps = {
+export type InputProps = {
   id?: string,
   name?: string
   placeholder?: string
@@ -25,10 +25,9 @@ function Input({ id, name, placeholder, className, autoComplete, type = 'text', 
         tracking-tightish
         border
         border-gray-150
-        shadow-sm
         rounded-md
-        py-2.5
-        px-5
+        shadow-sm
+        py-2.5 px-5
         placeholder:text-slate-450
       focus:border-indigo-500
       focus:ring-indigo-500

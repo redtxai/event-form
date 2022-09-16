@@ -5,11 +5,12 @@ import Label from './components/label/Label';
 import OnboardingIllustration from './components/onboarding-illustration/OnboardingIllustration';
 import Textarea from './components/textarea/Textarea';
 import Title from './components/title/Title';
+import URLComponent from './components/url-component/URLComponent';
 
 function App() {
   return (
     <div className="flex flex-col items-center">
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center p-5">
         <br/>
         <Title text='Event Form' type='large'></Title>
         <br/>
@@ -30,6 +31,10 @@ function App() {
         <Label htmlFor='description' text='Description'></Label>
         <br/>
         <Textarea id='description' name='description' placeholder='Write a summary about your event' resize={false}></Textarea>
+        <br/>
+        <Label htmlFor='custom-url' text='Slug'></Label>
+        <br/>
+        <URLComponent id='custom-url' name='custom-url' domain='yourdomain.com' placeholder='custom URL'></URLComponent>
       </div>
     </div>
   )
