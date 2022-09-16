@@ -3,6 +3,7 @@ import DatePicker from './components/datepicker/DatePicker';
 import Input from './components/input/Input';
 import Label from './components/label/Label';
 import OnboardingIllustration from './components/onboarding-illustration/OnboardingIllustration';
+import Textarea from './components/textarea/Textarea';
 import Title from './components/title/Title';
 
 function App() {
@@ -25,6 +26,10 @@ function App() {
         <Title text='When' type='small'></Title>
         <br/>
         <DatePicker></DatePicker>
+        <br/>
+        <Label htmlFor='description' text='Description'></Label>
+        <br/>
+        <Textarea id='description' name='description' placeholder='Write a summary about your event' resize={false}></Textarea>
       </div>
     </div>
   )

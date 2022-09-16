@@ -643,14 +643,14 @@ select {
 .max-h-80 {
   max-height: 20rem;
 }
+.w-full {
+  width: 100%;
+}
 .w-5 {
   width: 1.25rem;
 }
 .w-36 {
   width: 9rem;
-}
-.w-full {
-  width: 100%;
 }
 .origin-top-right {
   transform-origin: top right;
@@ -671,6 +671,15 @@ select {
 .select-none {
   -webkit-user-select: none;
           user-select: none;
+}
+.resize-none {
+  resize: none;
+}
+.resize {
+  resize: both;
+}
+.\!resize {
+  resize: both !important;
 }
 .flex-col {
   flex-direction: column;
