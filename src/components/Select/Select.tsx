@@ -27,7 +27,7 @@ const Select = memo(({ text, options, onClick }: SelectProps) => {
           rounded-md
           border border-gray-300bg-white
           py-2.5 px-5
-          text-sm font-medium
+          text-sm font-normal
         bg-white
           w-full
           shadow-sm hover:bg-gray-50
