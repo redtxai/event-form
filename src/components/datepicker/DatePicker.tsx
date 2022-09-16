@@ -1,15 +1,8 @@
 import { useCallback, useState } from "react";
-import Label from "../label/Label";
 import Select, { OptionType } from "../Select/Select";
 import { generateMockDateTime, generateMockDurations } from "./datepicker-mock";
 
-type DatePickerProps = {
-  text?: string,
-  htmlFor?: string,
-  className?: string,
-}
-
-function DatePicker({ text, htmlFor, className,  }: DatePickerProps) {
+function DatePicker() {
   const [dateTimeOptions, setDateTimeOptions] = useState<OptionType[]>(generateMockDateTime())
   const [durationOptions, setDurationOptions] = useState<OptionType[]>(generateMockDurations())
 
@@ -32,12 +25,9 @@ function DatePicker({ text, htmlFor, className,  }: DatePickerProps) {
   )
 
   return (
-    <section className="w-full">
-      <Label text="Set date and time"></Label>
-      <div>
-        <Select text="Date & time" options={dateTimeOptions} onClick={handleDateTimeSelect}></Select>
-        <Select text="Duration" options={durationOptions} onClick={handleDurationSelect}></Select>
-      </div>
+    <section className="w-full flex justify-between">
+      <Select text="Date & time" className="max-w-xxs" options={dateTimeOptions} onClick={handleDateTimeSelect}></Select>
+      <Select text="Duration" className="max-w-xxs" options={durationOptions} onClick={handleDurationSelect}></Select>
     </section>
   )
 }

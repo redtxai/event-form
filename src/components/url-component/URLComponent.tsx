@@ -10,14 +10,14 @@ type URLComponentProps = InputURLProps & {
 
 const URLComponent = ({ domain, domainClassName, urlClassName, className, ...inputProps  }: URLComponentProps) => {
   return (
-    <div className={`flex w-full rounded-md shadow-sm ${urlClassName ? urlClassName : ''}`}>
+    <div className={`flex w-full rounded-md ${urlClassName ? urlClassName : ''}`}>
       <span className={`
+        flex-none
         inline-flex items-center
         rounded-l-md
         border
         border-gray-150
         border-r-0
-        shadow-sm
         py-2.5 px-5
         text-slate-475
         text-sm-intermediate
@@ -26,7 +26,7 @@ const URLComponent = ({ domain, domainClassName, urlClassName, className, ...inp
         ${domainClassName ? domainClassName : ''}`}>
         {domain}
       </span>
-      <Input className={`rounded-none rounded-r-md ${className ? className : ''}`} { ...inputProps }></Input>
+      <Input className={`grow rounded-none rounded-r-md ${className ? className : ''}`} { ...inputProps }></Input>
     </div>
   )
 }
