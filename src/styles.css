@@ -760,6 +760,10 @@ select {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
 .pt-6 {
   padding-top: 1.5rem;
 }
@@ -769,6 +773,10 @@ select {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 .text-xs {
   font-size: 0.75rem;
@@ -781,11 +789,11 @@ select {
 .font-normal {
   font-weight: 400;
 }
-.font-medium {
-  font-weight: 500;
-}
 .font-bold {
   font-weight: 700;
+}
+.font-medium {
+  font-weight: 500;
 }
 .font-semibold {
   font-weight: 600;
@@ -807,6 +815,10 @@ select {
 .text-gray-900 {
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 .opacity-0 {
   opacity: 0;
@@ -895,6 +907,9 @@ select {
 .leading-4-05 {
     line-height: 18px;
   }
+.leading-4-07 {
+    line-height: 19px;
+  }
 /********************************************************************************/
 /********************************* BORDER COLOR *********************************/
 /********************************************************************************/
@@ -915,6 +930,12 @@ select {
 /********************************************************************************/
 .max-w-xxs {
     max-width: 11em;
+  }
+/********************************************************************************/
+/******************************** BACKGROUND COLOR ******************************/
+/********************************************************************************/
+.bg-indigo-550 {
+    background-color: #506CF0;
   }
 .placeholder\:text-slate-450::placeholder {
     color: #8D9CAE;
