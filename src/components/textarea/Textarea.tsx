@@ -10,11 +10,12 @@ type TextareaProps = {
   defaultValue?: string 
   value?: string,
   resize?: boolean
+  containsError?: boolean
   onChange?: ChangeEventHandler<HTMLInputElement>
   register?: UseFormRegister<FieldValues>
 }
 
-const Textarea = ({ id, name, className, rows = 3, placeholder, defaultValue = '', value = '', resize = true, register }: TextareaProps) => {
+const Textarea = ({ id, name, className, rows = 3, placeholder, defaultValue = '', value = '', resize = true, containsError, register }: TextareaProps) => {
   return (
     <textarea
       id={id}
@@ -34,6 +35,7 @@ const Textarea = ({ id, name, className, rows = 3, placeholder, defaultValue = '
       focus:ring-indigo-500
         w-full
         ${!resize ? 'resize-none' : ''}
+        ${containsError ? 'border-red-550 bg-red-25' : ''}
         ${className ? className : ''}`}
       placeholder={placeholder}
       defaultValue={defaultValue || value}

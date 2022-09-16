@@ -29,7 +29,7 @@ const Select = memo(({ id, name, text, errorText, options, showError, className,
   const [selectedOption, setSelectedOption] = useState<OptionType | undefined>(options.find(option => option.selected))
   return (
     <>
-      <input id={id} name={name} type="hidden" value={selectedOption?.text} {...(register && id && register(id, { required: true }))} />
+      <input id={id} name={name} type="hidden" value={selectedOption?.text || ''} {...(register && id && register(id, { required: true }))} />
       <Menu as="div" className={`relative w-full ${className ? className : ''}`}>
         <Menu.Button
           type="button"
@@ -42,6 +42,7 @@ const Select = memo(({ id, name, text, errorText, options, showError, className,
             w-full
             shadow-sm hover:bg-gray-50
             ${selectedOption ? 'text-gray-700' : 'text-slate-450'}
+            ${showError ? 'border-red-550 bg-red-25' : ''}
           `}
         >
           {selectedOption?.text || text}
