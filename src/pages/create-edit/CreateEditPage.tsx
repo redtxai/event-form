@@ -1,5 +1,5 @@
-import CreateEditBody from "./CreateEditBody"
-import CreateEditHeader from "./CreateEditHeader"
+import CreateEditBody from "./components/create-edit-body/CreateEditBody"
+import CreateEditHeader from "./components/create-edit-header/CreateEditHeader"
 
 const CreateEditPage = () => {
   return (

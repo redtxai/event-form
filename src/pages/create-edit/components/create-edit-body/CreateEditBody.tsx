@@ -1,13 +1,13 @@
 import { useForm } from "react-hook-form";
 
-import Button from "../../components/button/Button"
-import DatePicker from "../../components/datepicker/DatePicker"
-import FormElementWrapper from "../../components/form-element-wrapper/FormElementWrapper"
-import Input from "../../components/input/Input"
-import OnboardingIllustration from "../../components/onboarding-illustration/OnboardingIllustration"
-import Textarea from "../../components/textarea/Textarea"
-import Title from "../../components/title/Title"
-import URLComponent from "../../components/url-component/URLComponent"
+import Button from "../../../../components/button/Button"
+import DatePicker from "../../../../components/datepicker/DatePicker"
+import FormElementWrapper from "../../../../components/form-element-wrapper/FormElementWrapper"
+import Input from "../../../../components/input/Input"
+import Textarea from "../../../../components/textarea/Textarea"
+import Title from "../../../../components/title/Title"
+import URLComponent from "../../../../components/url-component/URLComponent"
+import WhereComponent from "../where-component/WhereComponent";
 
 const CreateEditBody = () => {
   const {
@@ -28,10 +28,7 @@ const CreateEditBody = () => {
           <Input id="event-name" name="event-name" placeholder="Event name" className="w-full" register={register}></Input>
         </FormElementWrapper>
         <Title type="small" text="Where" className="mt-9"></Title>
-        <section className="flex mt-4-05">
-          <OnboardingIllustration type="virtual"></OnboardingIllustration>
-          <OnboardingIllustration type="inperson" className="ml-5"></OnboardingIllustration>
-        </section>
+        <WhereComponent showErrors={errors?.where?.type === "required"} register={register}></WhereComponent>
         <Title type="small" text="When" className="mt-10"></Title>
         <FormElementWrapper text="Set date and time" htmlFor="date-time" className="mt-5-05">
           <DatePicker register={register} showDateTimeError={errors?.['date-time']?.type === "required"} showDurationError={errors?.duration?.type === "required"}></DatePicker>

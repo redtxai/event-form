@@ -637,9 +637,6 @@ select {
 .mt-9 {
   margin-top: 2.25rem;
 }
-.ml-5 {
-  margin-left: 1.25rem;
-}
 .mt-10 {
   margin-top: 2.5rem;
 }
@@ -654,6 +651,9 @@ select {
 }
 .mt-2 {
   margin-top: 0.5rem;
+}
+.ml-5 {
+  margin-left: 1.25rem;
 }
 .box-border {
   box-sizing: border-box;

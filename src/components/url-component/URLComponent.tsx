@@ -8,7 +8,7 @@ type URLComponentProps = InputURLProps & {
   urlClassName?: string
 }
 
-const URLComponent = ({ domain, domainClassName, urlClassName, className, register, ...inputProps  }: URLComponentProps) => {
+const URLComponent = ({ domain, domainClassName, urlClassName, className, ...inputProps  }: URLComponentProps) => {
   return (
     <div className={`flex w-full rounded-md ${urlClassName ? urlClassName : ''}`}>
       <span className={`
