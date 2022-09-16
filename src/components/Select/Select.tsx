@@ -14,13 +14,14 @@ export type OptionType = {
 type SelectProps = {
   text: string,
   options: OptionType[],
+  className?: string
   onClick: (selectedOption: string) => void
 }
 
-const Select = memo(({ text, options, onClick }: SelectProps) => {
+const Select = memo(({ text, options, className, onClick }: SelectProps) => {
   const [selectedOption, setSelectedOption] = useState<OptionType | undefined>(options.find(option => option.selected))
   return (
-    <Menu as="div" className="relative">
+    <Menu as="div" className={`relative w-full ${className ? className : ''}`}>
       <Menu.Button
         type="button"
         className={`flex justify-between

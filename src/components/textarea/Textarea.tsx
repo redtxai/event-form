@@ -30,7 +30,7 @@ const Textarea = ({ id, name, className, rows = 3, placeholder, defaultValue = '
         placeholder:text-slate-450
       focus:border-indigo-500
       focus:ring-indigo-500
-        sm:max-w-xs
+        w-full
         ${!resize ? 'resize-none' : ''}
         ${className ? className : ''}`}
       placeholder={placeholder}
