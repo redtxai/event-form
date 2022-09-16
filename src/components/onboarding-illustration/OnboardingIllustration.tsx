@@ -1,16 +1,20 @@
 
 import { useState } from 'react';
+import { FieldValues, UseFormRegister } from 'react-hook-form';
 
 type OnboardingIllustrationProps = {
+  id?: string
+  name?: string
   type: 'virtual' | 'inperson'
   className?: string
   onClick?: () => void
+  register?: UseFormRegister<FieldValues>
 }
 
-function OnboardingIllustration({ type, className, onClick }: OnboardingIllustrationProps) {
+function OnboardingIllustration({ id, name, type, className, onClick, register }: OnboardingIllustrationProps) {
   const [selected, setSelected] = useState(false);
 
-  const handleClick = () => {
+  const handleOnChange = () => {
     setSelected(!selected)
     if (onClick) {
       onClick()
@@ -38,7 +42,8 @@ function OnboardingIllustration({ type, className, onClick }: OnboardingIllustra
       border
       ${selected ? 'border-indigo-500 ring-indigo-500' : 'border-slate-175'}
       ${className ? className : ''}`}
-      onClick={handleClick}>
+      onClick={handleOnChange}>
+      <input id={id} name={name} type="checkbox" checked={selected} onChange={handleOnChange} className="hidden" {...(register && id && register(id, { required: true }))} />
       <img src={`/assets/img/${attrMap[type].img}.svg`} alt={type} />
       <h5 className="text-sm-intermediate leading-4-06 font-normal tracking-tightish text-blue-950 mt-3">{attrMap[type].title}</h5>
       <div className='text-center text-xs tracking-tightish text-gray-450 mt-3'>Nulla facilisi. Donec aliquam leo sed eros consectetur, vel </div>

@@ -1,8 +1,15 @@
 import { useCallback, useState } from "react";
+import { FieldValues, UseFormRegister } from "react-hook-form";
 import Select, { OptionType } from "../Select/Select";
 import { generateMockDateTime, generateMockDurations } from "./datepicker-mock";
 
-function DatePicker() {
+type DatePickerProps = {
+  showDateTimeError?: boolean
+  showDurationError?: boolean
+  register?: UseFormRegister<FieldValues>
+}
+
+function DatePicker({ showDateTimeError, showDurationError, register }: DatePickerProps) {
   const [dateTimeOptions, setDateTimeOptions] = useState<OptionType[]>(generateMockDateTime())
   const [durationOptions, setDurationOptions] = useState<OptionType[]>(generateMockDurations())
 
@@ -26,8 +33,20 @@ function DatePicker() {
 
   return (
     <section className="w-full flex justify-between">
-      <Select text="Date & time" className="max-w-xxs" options={dateTimeOptions} onClick={handleDateTimeSelect}></Select>
-      <Select text="Duration" className="max-w-xxs" options={durationOptions} onClick={handleDurationSelect}></Select>
+      <Select id="date-time" name="date-time"
+        text="Date & time"
+        options={dateTimeOptions}
+        showError={showDateTimeError}
+        className="max-w-xxs"
+        onClick={handleDateTimeSelect}
+        register={register}></Select>
+      <Select id="duration" name="duration"
+        text="Duration"
+        className="max-w-xxs"
+        options={durationOptions}
+        showError={showDurationError}
+        onClick={handleDurationSelect}
+        register={register}></Select>
     </section>
   )
 }

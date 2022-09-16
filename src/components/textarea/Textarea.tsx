@@ -1,4 +1,5 @@
 import { ChangeEventHandler } from "react"
+import { FieldValues, UseFormRegister } from "react-hook-form"
 
 type TextareaProps = {
   id?: string
@@ -10,9 +11,10 @@ type TextareaProps = {
   value?: string,
   resize?: boolean
   onChange?: ChangeEventHandler<HTMLInputElement>
+  register?: UseFormRegister<FieldValues>
 }
 
-const Textarea = ({ id, name, className, rows = 3, placeholder, defaultValue = '', value = '', resize = true }: TextareaProps) => {
+const Textarea = ({ id, name, className, rows = 3, placeholder, defaultValue = '', value = '', resize = true, register }: TextareaProps) => {
   return (
     <textarea
       id={id}
@@ -35,6 +37,7 @@ const Textarea = ({ id, name, className, rows = 3, placeholder, defaultValue = '
         ${className ? className : ''}`}
       placeholder={placeholder}
       defaultValue={defaultValue || value}
+      {...(register && id && register(id, { required: true }))}
     />
   )
 }
