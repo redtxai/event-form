@@ -1,4 +1,5 @@
 import './App.css';
+import DatePicker from './components/datepicker/DatePicker';
 import Input from './components/input/Input';
 import Label from './components/label/Label';
 import OnboardingIllustration from './components/onboarding-illustration/OnboardingIllustration';
@@ -22,6 +23,8 @@ function App() {
         <OnboardingIllustration type='inperson'></OnboardingIllustration>
         <br/>
         <Title text='When' type='small'></Title>
+        <br/>
+        <DatePicker></DatePicker>
       </div>
     </div>
   )
