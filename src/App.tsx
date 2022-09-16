@@ -1,4 +1,5 @@
 import './App.css';
+import Button from './components/button/Button';
 import DatePicker from './components/datepicker/DatePicker';
 import Input from './components/input/Input';
 import Label from './components/label/Label';
@@ -35,6 +36,8 @@ function App() {
         <Label htmlFor='custom-url' text='Slug'></Label>
         <br/>
         <URLComponent id='custom-url' name='custom-url' domain='yourdomain.com' placeholder='custom URL'></URLComponent>
+        <br/>
+        <Button text="Create event"></Button>
       </div>
     </div>
   )
