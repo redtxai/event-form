@@ -673,6 +673,9 @@ select {
 .h-5 {
   height: 1.25rem;
 }
+.h-screen {
+  height: 100vh;
+}
 .h-full {
   height: 100%;
 }
@@ -693,6 +696,9 @@ select {
 }
 .w-36 {
   width: 9rem;
+}
+.w-16 {
+  width: 4rem;
 }
 .max-w-xl {
   max-width: 36rem;
@@ -744,6 +750,9 @@ select {
 .items-center {
   align-items: center;
 }
+.justify-center {
+  justify-content: center;
+}
 .justify-between {
   justify-content: space-between;
 }
@@ -776,6 +785,9 @@ select {
 .border-r-0 {
   border-right-width: 0px;
 }
+.border-l {
+  border-left-width: 1px;
+}
 .border-t {
   border-top-width: 1px;
 }
@@ -790,6 +802,15 @@ select {
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+.bg-\[url\(\'assets\/img\/banner\.png\'\)\] {
+  background-image: url('assets/img/banner.png');
+}
+.bg-center {
+  background-position: center;
+}
+.bg-no-repeat {
+  background-repeat: no-repeat;
 }
 .py-2\.5 {
   padding-top: 0.625rem;
@@ -940,6 +961,9 @@ select {
 /********************************************************************************/
 /************************************ COLORS ************************************/
 /********************************************************************************/
+.text-slate-350 {
+    color: #D8DEEA;
+  }
 .text-slate-450 {
     color: #8D9CAE;
   }
@@ -1015,6 +1039,15 @@ select {
 .max-w-xxs {
     max-width: 16.875em;
   }
+.max-w-1xxs {
+    max-width: 16.250em;
+  }
+.max-w-05xs {
+    max-width: 18.750em;
+  }
+.max-w-1xl {
+    max-width: 38em;
+  }
 /********************************************************************************/
 /******************************** BACKGROUND COLOR ******************************/
 /********************************************************************************/
@@ -1044,6 +1077,12 @@ select {
   }
 .mt-11-05 {
     margin-top: 2.813em;
+  }
+/********************************************************************************/
+/************************************* HEIGHT ***********************************/
+/********************************************************************************/
+.h-75 {
+    height: 300px;
   }
 .placeholder\:text-slate-450::placeholder {
     color: #8D9CAE;
