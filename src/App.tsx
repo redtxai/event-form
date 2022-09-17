@@ -10,7 +10,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<LandingPage></LandingPage>}/>
           <Route path="/create" element={<CreateEditPage></CreateEditPage>}/>
-          <Route path="/edit" element={<CreateEditPage></CreateEditPage>}/>
+          <Route path="/edit/:id" element={<CreateEditPage></CreateEditPage>}/>
         </Routes>
       </BrowserRouter>
     </main>

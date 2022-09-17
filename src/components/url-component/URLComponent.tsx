@@ -6,6 +6,7 @@ type URLComponentProps = InputURLProps & {
   domain: string
   domainClassName?: string
   urlClassName?: string
+  value?: string
 }
 
 const URLComponent = ({ domain, domainClassName, urlClassName, className, ...inputProps  }: URLComponentProps) => {

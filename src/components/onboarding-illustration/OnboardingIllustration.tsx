@@ -1,8 +1,7 @@
 
 import { memo, useState } from 'react';
 import { FieldValues, UseFormRegister } from 'react-hook-form';
-
-export type OnboardingType = 'virtual' | 'inperson'
+import { OnboardingType } from '../../models/event.model';
 
 type OnboardingIllustrationProps = {
   name?: string

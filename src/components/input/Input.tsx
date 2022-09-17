@@ -1,4 +1,4 @@
-import { ChangeEventHandler } from 'react';
+import { useEffect, useState } from 'react';
 import { FieldValues, UseFormRegister } from 'react-hook-form';
 
 export type InputProps = {
@@ -10,11 +10,18 @@ export type InputProps = {
   containsError?: boolean
   type?: string // // in order to expand the system features, this could assume any types listed on the HTMLInputTypeAttribute.
   value?: string // as mentioned above, this property also would assume different types.
-  onChange?: ChangeEventHandler<HTMLInputElement>
   register?: UseFormRegister<FieldValues>
 }
 
-const Input = ({ id, name, placeholder, className, autoComplete, containsError, type = 'text', value, onChange, register }: InputProps) => {
+const Input = ({ id, name, placeholder, className, autoComplete, containsError, type = 'text', value, register }: InputProps) => {
+  const [inputValue, setInputValue] = useState('')
+
+  useEffect(() => {
+    if (value) {
+      setInputValue(value)
+    }
+  }, [value])
+
   return (
     <input
       type={type}
@@ -35,8 +42,7 @@ const Input = ({ id, name, placeholder, className, autoComplete, containsError, 
       focus:ring-indigo-500
         ${containsError ? 'border-red-550 bg-red-25' : ''}
         ${className ? className : ''}`}
-      value={value || undefined}
-      onChange={onChange || undefined}
+        defaultValue={inputValue}
       {...(register && id && register(id, { required: true }))}
     />
   )

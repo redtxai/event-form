@@ -1,7 +1,8 @@
+import { memo } from "react"
 import Button from "../../../../components/button/Button"
 import Title from "../../../../components/title/Title"
 
-const CreateEditHeader = () => {
+const CreateEditHeader = memo(() => {
   return <header>
       <p className="h-16 relative w-full"></p>
       <section className="max-w-xl m-auto bg-white px-4 py-5 sm:px-6">
@@ -15,6 +16,6 @@ const CreateEditHeader = () => {
       </div>
     </section>
   </header>
-}
+})
 
 export default CreateEditHeader
