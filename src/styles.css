@@ -619,6 +619,9 @@ select {
 .right-0 {
   right: 0px;
 }
+.top-0 {
+  top: 0px;
+}
 .z-10 {
   z-index: 10;
 }
@@ -655,6 +658,9 @@ select {
 .ml-5 {
   margin-left: 1.25rem;
 }
+.mt-6 {
+  margin-top: 1.5rem;
+}
 .box-border {
   box-sizing: border-box;
 }
@@ -684,6 +690,9 @@ select {
 }
 .h-16 {
   height: 4rem;
+}
+.h-9 {
+  height: 2.25rem;
 }
 .max-h-80 {
   max-height: 20rem;
@@ -847,6 +856,14 @@ select {
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+.px-3\.5 {
+  padding-left: 0.875rem;
+  padding-right: 0.875rem;
+}
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 .px-2\.5 {
   padding-left: 0.625rem;
