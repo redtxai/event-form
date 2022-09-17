@@ -14,7 +14,7 @@ export type InputProps = {
   register?: UseFormRegister<FieldValues>
 }
 
-function Input({ id, name, placeholder, className, autoComplete, containsError, type = 'text', value, onChange, register }: InputProps) {
+const Input = ({ id, name, placeholder, className, autoComplete, containsError, type = 'text', value, onChange, register }: InputProps) => {
   return (
     <input
       type={type}
