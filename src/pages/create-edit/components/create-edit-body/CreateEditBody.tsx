@@ -37,7 +37,7 @@ const CreateEditBody = ({ customCircleEvent }: CreateEditBodyProps) => {
         </FormElementWrapper>
         <Title type="small" text="Where" className="mt-9"></Title>
         <WhereComponent showErrors={errors?.where?.type === "required"} clearErrors={clearErrors}
-          setValue={setValue} register={register}></WhereComponent>
+          setValue={setValue} register={register} value={customCircleEvent?.["where"]}></WhereComponent>
         <Title type="small" text="When" className="mt-10"></Title>
         <FormElementWrapper text="Set date and time" htmlFor="datetime" className="mt-5-05">
           <DatePicker
