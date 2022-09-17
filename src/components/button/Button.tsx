@@ -1,17 +1,18 @@
 import { MouseEventHandler } from "react";
 
 type ButtonProps = {
-  text: string,
+  text?: string,
   className?: string,
   onClick?: MouseEventHandler<HTMLButtonElement>
+  children?: React.ReactNode
 }
 
-const Button = ({ text, className, onClick }: ButtonProps) => {
+const Button = ({ text, className, onClick, children }: ButtonProps) => {
   return (
     <button className={`${className ? className : ''}`}
       onClick={onClick}
     >
-      {text}
+      {text || children}
     </button>
   )
 }
