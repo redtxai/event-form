@@ -33,7 +33,7 @@ const CreateEditBody = ({ customCircleEvent }: CreateEditBodyProps) => {
         <FormElementWrapper text="Event Name" htmlFor="event-name" showError={errors?.['event-name']?.type === "required"}>
           <Input id="event-name" name="event-name" placeholder="Event name"
             value={customCircleEvent?.["event-name"]}
-            className="w-full" containsError={errors?.['event-name']?.type === "required"} register={register}></Input>
+            className="w-full" containsError={errors?.['event-name']?.type === "required"} register={register} setValue={setValue}></Input>
         </FormElementWrapper>
         <Title type="small" text="Where" className="mt-9"></Title>
         <WhereComponent showErrors={errors?.where?.type === "required"} clearErrors={clearErrors}
@@ -55,13 +55,13 @@ const CreateEditBody = ({ customCircleEvent }: CreateEditBodyProps) => {
             className="h-40"
             value={customCircleEvent?.["description"]}
             containsError={errors?.description?.type === "required"}
-            register={register}></Textarea>
+            register={register} setValue={setValue}></Textarea>
         </FormElementWrapper>
         <FormElementWrapper text="Slug" htmlFor="slug" showError={errors?.slug?.type === "required"} className="mt-7-05">
           <URLComponent domain="yourdomain.com"
             id="slug" name="slug" placeholder="custom URL"
             containsError={errors?.['slug']?.type === "required"} register={register}
-            value={customCircleEvent?.slug}></URLComponent>
+            value={customCircleEvent?.slug} setValue={setValue}></URLComponent>
         </FormElementWrapper>
         <section className="mt-11-05">
           <Button text="Create event" className="py-2.5 px-6 rounded-md bg-indigo-550 font-bold text-base text-white leading-4-07"></Button>

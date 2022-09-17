@@ -1,7 +1,8 @@
 import { useCallback, useState } from "react"
 import { FieldValues, UseFormClearErrors, UseFormRegister, UseFormSetValue } from "react-hook-form"
 import FormErrorMessage from "../../../../components/form-error-message/FormErrorMessage"
-import OnboardingIllustration, { OnboardingType } from "../../../../components/onboarding-illustration/OnboardingIllustration"
+import OnboardingIllustration from "../../../../components/onboarding-illustration/OnboardingIllustration"
+import { OnboardingType } from "../../../../models/event.model"
 
 type OnboardingMap = Record<OnboardingType, boolean>
 

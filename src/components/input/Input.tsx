@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import { FieldValues, UseFormRegister } from 'react-hook-form';
+import { FieldValues, UseFormRegister, UseFormSetValue } from 'react-hook-form';
 
 export type InputProps = {
-  id?: string,
+  id: string,
   name?: string
   placeholder?: string
   autoComplete?: string
@@ -11,16 +11,18 @@ export type InputProps = {
   type?: string // // in order to expand the system features, this could assume any types listed on the HTMLInputTypeAttribute.
   value?: string // as mentioned above, this property also would assume different types.
   register?: UseFormRegister<FieldValues>
+  setValue: UseFormSetValue<FieldValues>
 }
 
-const Input = ({ id, name, placeholder, className, autoComplete, containsError, type = 'text', value, register }: InputProps) => {
+const Input = ({ id, name, placeholder, className, autoComplete, containsError, type = 'text', value, register, setValue }: InputProps) => {
   const [inputValue, setInputValue] = useState('')
 
   useEffect(() => {
     if (value) {
       setInputValue(value)
+      setValue(id, value)
     }
-  }, [value])
+  }, [value, id, setValue])
 
   return (
     <input

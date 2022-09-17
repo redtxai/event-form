@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
-import { FieldValues, UseFormRegister } from "react-hook-form"
+import { FieldValues, UseFormRegister, UseFormSetValue } from "react-hook-form"
 
 type TextareaProps = {
-  id?: string
+  id: string
   name?: string
   className?: string
   rows?: number
@@ -11,14 +11,18 @@ type TextareaProps = {
   resize?: boolean
   containsError?: boolean
   register?: UseFormRegister<FieldValues>
+  setValue: UseFormSetValue<FieldValues>
 }
 
-const Textarea = ({ id, name, className, rows = 3, placeholder, value = '', resize = true, containsError, register }: TextareaProps) => {
+const Textarea = ({ id, name, className, rows = 3, placeholder, value = '', resize = true, containsError, register, setValue }: TextareaProps) => {
   const [textareaValue, setTextareaValue] = useState('')
 
   useEffect(() => {
-    setTextareaValue(value)
-  }, [value])
+    if (value) {
+      setTextareaValue(value)
+      setValue(id, value)
+    }
+  }, [value, id, setValue])
 
   return (
     <textarea
