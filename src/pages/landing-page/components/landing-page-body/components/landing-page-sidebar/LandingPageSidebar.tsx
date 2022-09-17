@@ -1,5 +1,5 @@
 
-const LandpageSidebar = () => {
+const LandingPageSidebar = () => {
   return <section className="
     w-full max-w-1xxs h-custom
     flex justify-center items-center
@@ -10,4 +10,4 @@ const LandpageSidebar = () => {
   </section>
 }
 
-export default LandpageSidebar
+export default LandingPageSidebar

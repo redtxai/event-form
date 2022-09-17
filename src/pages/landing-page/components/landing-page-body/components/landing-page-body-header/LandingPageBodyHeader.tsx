@@ -4,7 +4,7 @@ import Title from "../../../../../../components/title/Title"
 
 type FeedNavigation = 'newest' | 'oldest' | 'activity' | 'popular'
 
-const LandpageBodyHeader = () => {
+const LandingPageBodyHeader = () => {
   const[active, setActive] = useState<FeedNavigation>('newest')
 
   return <header className="w-full relative">
@@ -52,4 +52,4 @@ const LandpageBodyHeader = () => {
   </header>
 }
 
-export default LandpageBodyHeader
+export default LandingPageBodyHeader
