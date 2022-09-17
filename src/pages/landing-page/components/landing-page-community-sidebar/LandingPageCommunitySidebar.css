@@ -1,0 +1,9 @@
+
+.initial-position {
+  left: -16.875em;
+  transition: all 0.5s ease;
+}
+
+.initial-position.opened {
+  left: 4em;
+}

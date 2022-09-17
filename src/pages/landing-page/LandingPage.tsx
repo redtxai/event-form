@@ -6,9 +6,9 @@ import LandingPageHeader from "./components/landing-page-header/LandingPageHeade
 
 const LandingPage = () => {
   return (
-    <section className="flex">
+    <section className="flex relative">
       <LandingPageCommunitySidebar></LandingPageCommunitySidebar>
-      <section className="w-full h-screen border-l border-gray-150 grow">
+      <section className="w-full border-l border-gray-150 grow">
         <LandingPageHeader></LandingPageHeader>
         <LandingPageBanner></LandingPageBanner>
         <LandingPageBody></LandingPageBody>
