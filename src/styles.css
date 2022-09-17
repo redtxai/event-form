@@ -661,6 +661,15 @@ select {
 .mt-6 {
   margin-top: 1.5rem;
 }
+.mt-12 {
+  margin-top: 3rem;
+}
+.ml-11 {
+  margin-left: 2.75rem;
+}
+.ml-2\.5 {
+  margin-left: 0.625rem;
+}
 .box-border {
   box-sizing: border-box;
 }
@@ -709,6 +718,9 @@ select {
 .w-16 {
   width: 4rem;
 }
+.w-1\/3 {
+  width: 33.333333%;
+}
 .max-w-xl {
   max-width: 36rem;
 }
@@ -736,6 +748,9 @@ select {
 }
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.cursor-pointer {
+  cursor: pointer;
 }
 .select-none {
   -webkit-user-select: none;
@@ -780,6 +795,9 @@ select {
 .rounded-none {
   border-radius: 0px;
 }
+.rounded-full {
+  border-radius: 9999px;
+}
 .rounded-l-md {
   border-top-left-radius: 0.375rem;
   border-bottom-left-radius: 0.375rem;
@@ -799,6 +817,9 @@ select {
 }
 .border-t {
   border-top-width: 1px;
+}
+.border-r {
+  border-right-width: 1px;
 }
 .border-indigo-500 {
   --tw-border-opacity: 1;
@@ -872,6 +893,10 @@ select {
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .pt-6 {
   padding-top: 1.5rem;
@@ -1004,6 +1029,9 @@ select {
 .text-blue-950 {
     color: #1D2839;
   }
+.text-blue-975 {
+    color: #1A283B;
+  }
 .text-red-650 {
     color: #D72C0D;
   }
@@ -1013,12 +1041,18 @@ select {
 .text-sm-intermediate {
     font-size: 15px;
   }
+.text-xl-intermediate {
+    font-size: 23px;
+  }
 .text-4xl-intermediate {
-    font-size: 2.5em;
+    font-size: 40px;
   }
 /********************************************************************************/
 /******************************** LETTER SPACING ********************************/
 /********************************************************************************/
+.tracking-very-tight {
+    letter-spacing: 0.007em;
+  }
 .tracking-widestish {
     letter-spacing: 0.019em;
   }
@@ -1037,6 +1071,9 @@ select {
 .leading-4-07 {
     line-height: 19px;
   }
+.leading-6-05 {
+    line-height: 27px;
+  }
 /********************************************************************************/
 /********************************* BORDER COLOR *********************************/
 /********************************************************************************/
@@ -1052,8 +1089,17 @@ select {
 /********************************************************************************/
 /*********************************** PADDING ************************************/
 /********************************************************************************/
+.pt-7-5 {
+    padding-top: 1.875em;
+  }
+.pr-7-5 {
+    padding-right: 1.875em;
+  }
 .pb-7-5 {
     padding-bottom: 1.875em;
+  }
+.pl-7-5 {
+    padding-left: 1.875em;
   }
 /********************************************************************************/
 /*********************************** MAX WIDTH **********************************/
@@ -1065,13 +1111,13 @@ select {
     max-width: 16.875em;
   }
 .max-w-1xxs {
-    max-width: 16.250em;
+    max-width: 13em;
   }
-.max-w-05xs {
-    max-width: 18.750em;
+.max-w-2-5xl {
+    max-width: 42.5em;
   }
-.max-w-1xl {
-    max-width: 38em;
+.max-w-3-5xl {
+    max-width: 60.313em;
   }
 /********************************************************************************/
 /******************************** BACKGROUND COLOR ******************************/
@@ -1084,6 +1130,9 @@ select {
   }
 .bg-red-25 {
     background-color: #FFF4F4;
+  }
+.bg-slate-350 {
+    background-color: #D8DEEA;
   }
 .bg-custom-100 {
     background-color: #F6F9FA;
@@ -1112,11 +1161,23 @@ select {
 /********************************************************************************/
 /************************************* HEIGHT ***********************************/
 /********************************************************************************/
+.h-7-5 {
+    height: 1.875em;
+  }
 .h-75 {
     height: 300px;
   }
+.h-custom-1 {
+    height: 24em;
+  }
 .h-custom {
     height: 30em;
+  }
+/********************************************************************************/
+/************************************* WIDTH ************************************/
+/********************************************************************************/
+.w-7-5 {
+    width: 1.875em;
   }
 /********************************************************************************/
 /********************************** BOX SHADOW **********************************/

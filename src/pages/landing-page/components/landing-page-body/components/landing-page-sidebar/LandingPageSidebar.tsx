@@ -5,7 +5,8 @@ const LandingPageSidebar = () => {
     flex justify-center items-center
     text-slate-350 font-bold text-xl
     leading-6
-    bg-zinc-75 shadow-custom-slate">
+    bg-zinc-75 shadow-custom-slate
+    ml-11">
     Sidebar
   </section>
 }
