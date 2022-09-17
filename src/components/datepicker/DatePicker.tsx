@@ -11,7 +11,7 @@ type DatePickerProps = {
   register?: UseFormRegister<FieldValues>
 }
 
-function DatePicker({ showDateTimeError, showDurationError, clearErrors, setValue, register }: DatePickerProps) {
+const DatePicker = ({ showDateTimeError, showDurationError, clearErrors, setValue, register }: DatePickerProps) =>{
   const [dateTimeOptions, setDateTimeOptions] = useState<OptionType[]>(generateMockDateTime())
   const [durationOptions, setDurationOptions] = useState<OptionType[]>(generateMockDurations())
 

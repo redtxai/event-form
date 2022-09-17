@@ -1,12 +1,18 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-// import CreateEditPage from './pages/create-edit/CreateEditPage';
+import CreateEditPage from './pages/create-edit/CreateEditPage';
 import LandingPage from './pages/landing-page/LandingPage';
 
-function App() {
+const App = () => {
   return (
     <main className='w-full'>
-      {/* <CreateEditPage></CreateEditPage> */}
-      <LandingPage></LandingPage>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LandingPage></LandingPage>}/>
+          <Route path="/create" element={<CreateEditPage></CreateEditPage>}/>
+          <Route path="/edit" element={<CreateEditPage></CreateEditPage>}/>
+        </Routes>
+      </BrowserRouter>
     </main>
   )
 }
