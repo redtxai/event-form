@@ -1,5 +1,5 @@
-import Button from "../../components/button/Button"
-import Title from "../../components/title/Title"
+import Button from "../../../../components/button/Button"
+import Title from "../../../../components/title/Title"
 
 const CreateEditHeader = () => {
   return <header>

@@ -1,4 +1,5 @@
 import { ChangeEventHandler } from 'react';
+import { FieldValues, UseFormRegister } from 'react-hook-form';
 
 export type InputProps = {
   id?: string,
@@ -6,12 +7,14 @@ export type InputProps = {
   placeholder?: string
   autoComplete?: string
   className?: string
+  containsError?: boolean
   type?: string // // in order to expand the system features, this could assume any types listed on the HTMLInputTypeAttribute.
   value?: string // as mentioned above, this property also would assume different types.
   onChange?: ChangeEventHandler<HTMLInputElement>
+  register?: UseFormRegister<FieldValues>
 }
 
-function Input({ id, name, placeholder, className, autoComplete, type = 'text', value, onChange }: InputProps) {
+function Input({ id, name, placeholder, className, autoComplete, containsError, type = 'text', value, onChange, register }: InputProps) {
   return (
     <input
       type={type}
@@ -30,9 +33,11 @@ function Input({ id, name, placeholder, className, autoComplete, type = 'text', 
         placeholder:text-slate-450
       focus:border-indigo-500
       focus:ring-indigo-500
+        ${containsError ? 'border-red-550 bg-red-25' : ''}
         ${className ? className : ''}`}
-        value={value || undefined}
-        onChange={onChange || undefined}
+      value={value || undefined}
+      onChange={onChange || undefined}
+      {...(register && id && register(id, { required: true }))}
     />
   )
 }
