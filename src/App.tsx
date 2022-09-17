@@ -1,12 +1,12 @@
 import './App.css';
 // import CreateEditPage from './pages/create-edit/CreateEditPage';
-import Landpage from './pages/landpage/Landpage';
+import LandingPage from './pages/landing-page/LandingPage';
 
 function App() {
   return (
     <main className='w-full'>
       {/* <CreateEditPage></CreateEditPage> */}
-      <Landpage></Landpage>
+      <LandingPage></LandingPage>
     </main>
   )
 }
