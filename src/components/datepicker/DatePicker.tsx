@@ -1,19 +1,35 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { FieldValues, UseFormClearErrors, UseFormRegister, UseFormSetValue } from "react-hook-form";
-import Select, { OptionType } from "../Select/Select";
+import Select from "../Select/Select";
 import { generateMockDateTime, generateMockDurations } from "./datepicker-mock";
 
 type DatePickerProps = {
   showDateTimeError?: boolean
   showDurationError?: boolean
   clearErrors?: UseFormClearErrors<FieldValues>
-  setValue?: UseFormSetValue<FieldValues>
+  setValue: UseFormSetValue<FieldValues>
   register?: UseFormRegister<FieldValues>
+  dateTimeDefaultValue?: string
+  durationDefaultValue?: string
 }
 
-const DatePicker = ({ showDateTimeError, showDurationError, clearErrors, setValue, register }: DatePickerProps) =>{
-  const [dateTimeOptions, setDateTimeOptions] = useState<OptionType[]>(generateMockDateTime())
-  const [durationOptions, setDurationOptions] = useState<OptionType[]>(generateMockDurations())
+const DatePicker = ({ showDateTimeError, showDurationError, clearErrors, setValue, register, dateTimeDefaultValue, durationDefaultValue }: DatePickerProps) =>{
+  const [dateTimeValue, setDateTimeValue] = useState('')
+  const [durationValue, setDurationValue] = useState('')
+
+  useEffect(() => {
+    if (dateTimeDefaultValue) {
+      setDateTimeValue(dateTimeDefaultValue)
+      setValue('date-time', dateTimeDefaultValue)
+    }
+  }, [dateTimeDefaultValue, setValue])
+
+  useEffect(() => {
+    if (durationDefaultValue) {
+      setDurationValue(durationDefaultValue)
+      setValue('duration', durationDefaultValue)
+    }
+  }, [durationDefaultValue, setValue])
 
   const handleDateTimeSelect = useCallback(
     (selectedOption: string) => {
@@ -23,9 +39,7 @@ const DatePicker = ({ showDateTimeError, showDurationError, clearErrors, setValu
       if (setValue) {
         setValue('date-time', selectedOption)
       }
-      setDateTimeOptions((prevOptions) => {
-        return prevOptions.map(({ text }) => ({ text, selected: text === selectedOption }))
-      })
+      setDateTimeValue(selectedOption)
     },
     [clearErrors, setValue, showDateTimeError],
   )
@@ -38,9 +52,7 @@ const DatePicker = ({ showDateTimeError, showDurationError, clearErrors, setValu
       if (setValue) {
         setValue('duration', selectedOption)
       }
-      setDurationOptions((prevOptions) => {
-        return prevOptions.map(({ text }) => ({ text, selected: text === selectedOption }))
-      })
+      setDurationValue(selectedOption)
     },
     [clearErrors, setValue, showDurationError],
   )
@@ -52,17 +64,19 @@ const DatePicker = ({ showDateTimeError, showDurationError, clearErrors, setValu
       <Select id="date-time" name="date-time"
         text="Date & time"
         className="max-w-xxs"
-        options={dateTimeOptions}
+        options={generateMockDateTime()}
         showError={showDateTimeError}
         onClick={handleDateTimeSelect}
-        register={register}></Select>
+        register={register}
+        value={dateTimeValue}></Select>
       <Select id="duration" name="duration"
         text="Duration"
         className="max-w-xxs"
-        options={durationOptions}
+        options={generateMockDurations()}
         showError={showDurationError}
         onClick={handleDurationSelect}
-        register={register}></Select>
+        register={register}
+        value={durationValue}></Select>
     </section>
   )
 }

@@ -45,7 +45,9 @@ const CreateEditBody = ({ customCircleEvent }: CreateEditBodyProps) => {
             setValue={setValue}
             register={register}
             showDateTimeError={errors?.['date-time']?.type === "required"}
-            showDurationError={errors?.duration?.type === "required"}></DatePicker>
+            showDurationError={errors?.duration?.type === "required"}
+            dateTimeDefaultValue={customCircleEvent?.["date-time"]}
+            durationDefaultValue={customCircleEvent?.["duration"]}></DatePicker>
         </FormElementWrapper>
         <FormElementWrapper text="Description" htmlFor="description" showError={errors?.description?.type === "required"} className="mt-10-05">
           <Textarea id="description"
