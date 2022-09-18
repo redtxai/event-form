@@ -21,7 +21,7 @@ type SelectProps = {
   options: string[]
   showError?: boolean
   className?: string
-  onClick: (selectedOption: string) => void
+  onClick?: (selectedOption: string) => void
   register?: UseFormRegister<FieldValues>
   value: string
 }
@@ -82,7 +82,7 @@ const Select = memo(({ id, name, text, errorText, options, showError, className,
                         )}`}
                         onClick={() => {
                           setSelectedOption(option);
-                          onClick(option)
+                          onClick && onClick(option)
                         }}
                       >
                         {option}
