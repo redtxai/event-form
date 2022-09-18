@@ -11,7 +11,7 @@ export type InputProps = {
   type?: string // // in order to expand the system features, this could assume any types listed on the HTMLInputTypeAttribute.
   value?: string // as mentioned above, this property also would assume different types.
   register?: UseFormRegister<FieldValues>
-  setValue: UseFormSetValue<FieldValues>
+  setValue?: UseFormSetValue<FieldValues>
 }
 
 const Input = ({ id, name, placeholder, className, autoComplete, containsError, type = 'text', value, register, setValue }: InputProps) => {
@@ -20,7 +20,9 @@ const Input = ({ id, name, placeholder, className, autoComplete, containsError, 
   useEffect(() => {
     if (value) {
       setInputValue(value)
-      setValue(id, value)
+      if (setValue) {
+        setValue(id, value)
+      }
     }
   }, [value, id, setValue])
 

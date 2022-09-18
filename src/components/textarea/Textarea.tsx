@@ -11,7 +11,7 @@ type TextareaProps = {
   resize?: boolean
   containsError?: boolean
   register?: UseFormRegister<FieldValues>
-  setValue: UseFormSetValue<FieldValues>
+  setValue?: UseFormSetValue<FieldValues>
 }
 
 const Textarea = ({ id, name, className, rows = 3, placeholder, value = '', resize = true, containsError, register, setValue }: TextareaProps) => {
@@ -20,7 +20,9 @@ const Textarea = ({ id, name, className, rows = 3, placeholder, value = '', resi
   useEffect(() => {
     if (value) {
       setTextareaValue(value)
-      setValue(id, value)
+      if (setValue) {
+        setValue(id, value)
+      }
     }
   }, [value, id, setValue])
 
