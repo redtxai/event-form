@@ -58,12 +58,12 @@ const DatePicker = ({ showDateTimeError, showDurationError, clearErrors, setValu
   )
 
   return (
-    <section className="w-full flex justify-between">
+    <section className="w-full flex sm:justify-between">
       {showDateTimeError}
       {showDurationError}
       <Select id="date-time" name="date-time"
         text="Date & time"
-        className="max-w-xxs"
+        className="max-w-xxxxs sm:max-w-xxs"
         options={generateMockDateTime()}
         showError={showDateTimeError}
         onClick={handleDateTimeSelect}
@@ -71,7 +71,7 @@ const DatePicker = ({ showDateTimeError, showDurationError, clearErrors, setValu
         value={dateTimeValue}></Select>
       <Select id="duration" name="duration"
         text="Duration"
-        className="max-w-xxs"
+        className="ml-2 sm:ml-0 max-w-xxxxs sm:max-w-xxs"
         options={generateMockDurations()}
         showError={showDurationError}
         onClick={handleDurationSelect}

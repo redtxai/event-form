@@ -4,8 +4,8 @@ import Title from "../../../../components/title/Title"
 
 const CreateEditHeader = memo(() => {
   return <header>
-      <p className="h-16 relative w-full"></p>
-      <section className="max-w-xl m-auto bg-white px-4 py-5 sm:px-6">
+      <p className="relative w-full sm:h-16"></p>
+      <section className="max-w-xl m-auto bg-white px-3 py-4 sm:px-6">
         <div className="-ml-4 -mt-2 flex flex-wrap items-center justify-between sm:flex-nowrap">
         <div className="ml-4 mt-2">
           <Title type="large" text="Event form"></Title>

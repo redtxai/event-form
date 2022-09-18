@@ -44,8 +44,11 @@ const Select = memo(({ id, name, text, errorText, options, showError, className,
           className={`flex justify-between
             rounded-md
             border border-gray-300bg-white
-            py-2.5 px-5
-            text-sm font-normal
+            py-1.5 px-3
+            sm:py-2.5 sm:px-5
+            text-xs sm:text-sm
+            leading-5
+            font-normal
           bg-white
             w-full
             shadow-sm hover:bg-gray-50
