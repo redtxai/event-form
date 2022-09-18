@@ -6,7 +6,7 @@ import './LandingPageCommunitySidebar.css'
 const LandingPageCommunitySidebar = () => {
   const[showMenu, setShowMenu] = useState<boolean>(false)
   return <>
-    <section className="h-full w-16 bg-stone-950 p-4 absolute inset-y-0 left-0 z-30">
+    <section className="h-full w-12 p-2 bg-stone-950 absolute inset-y-0 left-0 z-30 sm:w-16 sm:p-4">
       <Button className="w-8 h-8 rounded-md" onClick={() => setShowMenu(!showMenu)}><img src="assets/img/circle-icon.png" alt="circle"/></Button>
       <Button className="w-8 h-8 rounded-md bg-custom-150 mt-4"></Button>
       <Button className="w-8 h-8 rounded-md bg-custom-150 mt-4"></Button>

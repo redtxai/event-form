@@ -632,8 +632,11 @@ select {
 .left-0 {
   left: 0px;
 }
-.top-0 {
-  top: 0px;
+.top-4 {
+  top: 1rem;
+}
+.right-1 {
+  right: 0.25rem;
 }
 .z-10 {
   z-index: 10;
@@ -659,6 +662,9 @@ select {
 .mt-1 {
   margin-top: 0.25rem;
 }
+.ml-12 {
+  margin-left: 3rem;
+}
 .mt-5 {
   margin-top: 1.25rem;
 }
@@ -673,9 +679,6 @@ select {
 }
 .mt-2 {
   margin-top: 0.5rem;
-}
-.mt-9 {
-  margin-top: 2.25rem;
 }
 .mt-4 {
   margin-top: 1rem;
@@ -694,12 +697,6 @@ select {
 }
 .mb-12 {
   margin-bottom: 3rem;
-}
-.ml-5 {
-  margin-left: 1.25rem;
-}
-.mt-12 {
-  margin-top: 3rem;
 }
 .ml-11 {
   margin-left: 2.75rem;
@@ -740,9 +737,6 @@ select {
 .h-3 {
   height: 0.75rem;
 }
-.h-16 {
-  height: 4rem;
-}
 .h-9 {
   height: 2.25rem;
 }
@@ -758,8 +752,8 @@ select {
 .w-36 {
   width: 9rem;
 }
-.w-16 {
-  width: 4rem;
+.w-12 {
+  width: 3rem;
 }
 .w-8 {
   width: 2rem;
@@ -864,9 +858,6 @@ select {
 .border-r-0 {
   border-right-width: 0px;
 }
-.border-l {
-  border-left-width: 1px;
-}
 .border-t {
   border-top-width: 1px;
 }
@@ -894,8 +885,8 @@ select {
 .bg-no-repeat {
   background-repeat: no-repeat;
 }
-.p-4 {
-  padding: 1rem;
+.p-2 {
+  padding: 0.5rem;
 }
 .py-1\.5 {
   padding-top: 0.375rem;
@@ -937,24 +928,22 @@ select {
   padding-left: 2rem;
   padding-right: 2rem;
 }
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-.px-3\.5 {
-  padding-left: 0.875rem;
-  padding-right: 0.875rem;
-}
-.px-2\.5 {
-  padding-left: 0.625rem;
-  padding-right: 0.625rem;
-}
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
 .pt-6 {
   padding-top: 1.5rem;
+}
+.pb-6 {
+  padding-bottom: 1.5rem;
+}
+.pt-4 {
+  padding-top: 1rem;
 }
 .text-center {
   text-align: center;
@@ -978,6 +967,10 @@ select {
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 .font-normal {
   font-weight: 400;
@@ -1109,9 +1102,6 @@ select {
 .text-sm-intermediate {
     font-size: 15px;
   }
-.text-xl-intermediate {
-    font-size: 23px;
-  }
 /********************************************************************************/
 /******************************** LETTER SPACING ********************************/
 /********************************************************************************/
@@ -1139,9 +1129,6 @@ select {
 .leading-4-07 {
     line-height: 19px;
   }
-.leading-6-05 {
-    line-height: 27px;
-  }
 /********************************************************************************/
 /********************************* BORDER COLOR *********************************/
 /********************************************************************************/
@@ -1163,17 +1150,8 @@ select {
 /********************************************************************************/
 /*********************************** PADDING ************************************/
 /********************************************************************************/
-.pt-7-5 {
-    padding-top: 1.875em;
-  }
-.pr-7-5 {
-    padding-right: 1.875em;
-  }
 .pb-7-5 {
     padding-bottom: 1.875em;
-  }
-.pl-7-5 {
-    padding-left: 1.875em;
   }
 /********************************************************************************/
 /*********************************** MAX WIDTH **********************************/
@@ -1223,12 +1201,6 @@ select {
 /********************************************************************************/
 /************************************* MARGIN ***********************************/
 /********************************************************************************/
-.mt-7-05 {
-    margin-top: 1.875em;
-  }
-.mt-13 {
-    margin-top: 3.125em;
-  }
 /********************************************************************************/
 /************************************* HEIGHT ***********************************/
 /********************************************************************************/
@@ -1283,6 +1255,14 @@ select {
 }
 @media (min-width: 640px) {
 
+  .sm\:top-0 {
+    top: 0px;
+  }
+
+  .sm\:right-0 {
+    right: 0px;
+  }
+
   .sm\:ml-0 {
     margin-left: 0px;
   }
@@ -1293,6 +1273,10 @@ select {
 
   .sm\:mt-3 {
     margin-top: 0.75rem;
+  }
+
+  .sm\:ml-16 {
+    margin-left: 4rem;
   }
 
   .sm\:mt-9 {
@@ -1307,6 +1291,22 @@ select {
     margin-left: 1.25rem;
   }
 
+  .sm\:mt-6 {
+    margin-top: 1.5rem;
+  }
+
+  .sm\:ml-2 {
+    margin-left: 0.5rem;
+  }
+
+  .sm\:mt-12 {
+    margin-top: 3rem;
+  }
+
+  .sm\:flex {
+    display: flex;
+  }
+
   .sm\:h-40 {
     height: 10rem;
   }
@@ -1315,12 +1315,28 @@ select {
     height: 4rem;
   }
 
+  .sm\:w-16 {
+    width: 4rem;
+  }
+
   .sm\:flex-nowrap {
     flex-wrap: nowrap;
   }
 
+  .sm\:justify-start {
+    justify-content: flex-start;
+  }
+
   .sm\:justify-between {
     justify-content: space-between;
+  }
+
+  .sm\:border-l {
+    border-left-width: 1px;
+  }
+
+  .sm\:p-4 {
+    padding: 1rem;
   }
 
   .sm\:py-2\.5 {
@@ -1348,6 +1364,36 @@ select {
     padding-right: 1.5rem;
   }
 
+  .sm\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .sm\:px-3\.5 {
+    padding-left: 0.875rem;
+    padding-right: 0.875rem;
+  }
+
+  .sm\:px-3 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .sm\:px-2\.5 {
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+  }
+
+  .sm\:px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .sm\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
   .sm\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -1357,16 +1403,47 @@ select {
     font-size: 1rem;
     line-height: 1.5rem;
   }
+
+  .sm\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .sm\:leading-6 {
+    line-height: 1.5rem;
+  }
   .sm\:text-sm-intermediate {
     font-size: 15px;
+  }
+
+  .sm\:text-xl-intermediate {
+    font-size: 23px;
   }
 
   .sm\:text-4xl-intermediate {
     font-size: 40px;
   }
 
+  .sm\:leading-4-05 {
+    line-height: 17px;
+  }
+
+  .sm\:leading-4-06 {
+    line-height: 18px;
+  }
+
   .sm\:leading-4-07 {
     line-height: 19px;
+  }
+
+  .sm\:leading-6-05 {
+    line-height: 27px;
+  }
+  .sm\:border-gray-150 {
+    border-color: #E6E8EC
+  }
+  .sm\:pt-7-5 {
+    padding-top: 1.875em;
   }
 
   .sm\:max-w-xxs {
@@ -1390,5 +1467,9 @@ select {
 
   .sm\:mt-11-05 {
     margin-top: 2.813em;
+  }
+
+  .sm\:mt-13 {
+    margin-top: 3.125em;
   }
 }
