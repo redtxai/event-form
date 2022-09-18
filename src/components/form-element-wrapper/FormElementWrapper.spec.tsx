@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import FormElementWrapper from './FormElementWrapper';
 import Input from '../input/Input';
 
