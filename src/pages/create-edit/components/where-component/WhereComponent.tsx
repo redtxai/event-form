@@ -49,10 +49,10 @@ const WhereComponent = ({ showErrors, clearErrors, setValue, register, value }: 
   )
 
   return (
-    <section className="mt-4-05">
+    <section className="mt-3 sm:mt-4-05">
       <section className="flex">
         <OnboardingIllustration name="where" value='virtual' type="virtual" checked={onboardingMap.virtual} onClick={handleClick} register={register}></OnboardingIllustration>
-        <OnboardingIllustration name="where" value='inperson' type="inperson" className="ml-5" checked={onboardingMap.inperson} onClick={handleClick} register={register}></OnboardingIllustration>
+        <OnboardingIllustration name="where" value='inperson' type="inperson" className="ml-2 sm:ml-5" checked={onboardingMap.inperson} onClick={handleClick} register={register}></OnboardingIllustration>
       </section>
       {showErrors && <FormErrorMessage text="Where"></FormErrorMessage>}
     </section>

@@ -30,7 +30,7 @@ const Textarea = ({ id, name, className, rows = 3, placeholder, value = '', resi
       name={name}
       rows={rows}
       className={`font-normal
-        text-sm-intermediate
+        text-xs sm:text-sm-intermediate
         tracking-tightish
         border
         border-gray-150
