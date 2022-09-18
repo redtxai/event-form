@@ -1,21 +1,29 @@
-import { ChangeEventHandler } from "react"
-import { FieldValues, UseFormRegister } from "react-hook-form"
+import { useEffect, useState } from "react"
+import { FieldValues, UseFormRegister, UseFormSetValue } from "react-hook-form"
 
 type TextareaProps = {
-  id?: string
+  id: string
   name?: string
   className?: string
   rows?: number
   placeholder?: string
-  defaultValue?: string 
   value?: string,
   resize?: boolean
   containsError?: boolean
-  onChange?: ChangeEventHandler<HTMLInputElement>
   register?: UseFormRegister<FieldValues>
+  setValue: UseFormSetValue<FieldValues>
 }
 
-const Textarea = ({ id, name, className, rows = 3, placeholder, defaultValue = '', value = '', resize = true, containsError, register }: TextareaProps) => {
+const Textarea = ({ id, name, className, rows = 3, placeholder, value = '', resize = true, containsError, register, setValue }: TextareaProps) => {
+  const [textareaValue, setTextareaValue] = useState('')
+
+  useEffect(() => {
+    if (value) {
+      setTextareaValue(value)
+      setValue(id, value)
+    }
+  }, [value, id, setValue])
+
   return (
     <textarea
       id={id}
@@ -38,7 +46,7 @@ const Textarea = ({ id, name, className, rows = 3, placeholder, defaultValue = '
         ${containsError ? 'border-red-550 bg-red-25' : ''}
         ${className ? className : ''}`}
       placeholder={placeholder}
-      defaultValue={defaultValue || value}
+      defaultValue={textareaValue}
       {...(register && id && register(id, { required: true }))}
     />
   )

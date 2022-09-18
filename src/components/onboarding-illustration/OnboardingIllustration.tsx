@@ -1,8 +1,7 @@
 
-import { memo, useState } from 'react';
+import { memo, useEffect, useState } from 'react';
 import { FieldValues, UseFormRegister } from 'react-hook-form';
-
-export type OnboardingType = 'virtual' | 'inperson'
+import { OnboardingType } from '../../models/event.model';
 
 type OnboardingIllustrationProps = {
   name?: string
@@ -16,6 +15,12 @@ type OnboardingIllustrationProps = {
 
 const OnboardingIllustration = memo(({ name, type, value, checked, className, onClick, register }: OnboardingIllustrationProps) => {
   const [selected, setSelected] = useState(checked);
+
+  useEffect(() => {
+    if (checked) {
+      setSelected(checked)
+    }
+  }, [checked])
 
   const handleOnChange = () => {
     setSelected(!selected)

@@ -1,4 +1,4 @@
-import { Fragment, memo, useState } from 'react'
+import { Fragment, memo, useEffect, useState } from 'react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Menu, Transition } from '@headlessui/react'
 import { FieldValues, UseFormRegister } from 'react-hook-form'
@@ -18,18 +18,26 @@ type SelectProps = {
   name?: string
   text: string
   errorText?: string
-  options: OptionType[]
+  options: string[]
   showError?: boolean
   className?: string
   onClick: (selectedOption: string) => void
   register?: UseFormRegister<FieldValues>
+  value: string
 }
 
-const Select = memo(({ id, name, text, errorText, options, showError, className, onClick, register }: SelectProps) => {
-  const [selectedOption, setSelectedOption] = useState<OptionType | undefined>(options.find(option => option.selected))
+const Select = memo(({ id, name, text, errorText, options, showError, className, onClick, register, value }: SelectProps) => {
+  const [selectedOption, setSelectedOption] = useState<string>()
+  
+  useEffect(() => {
+    if (value) {
+      setSelectedOption(value)
+    }
+  }, [value])
+
   return (
     <>
-      <input id={id} name={name} type="hidden" value={selectedOption?.text || ''} {...(register && id && register(id, { required: true }))} />
+      <input id={id} name={name} type="hidden" value={selectedOption || ''} {...(register && id && register(id, { required: true }))} />
       <Menu as="div" className={`relative w-full ${className ? className : ''}`}>
         <Menu.Button
           type="button"
@@ -45,7 +53,7 @@ const Select = memo(({ id, name, text, errorText, options, showError, className,
             ${showError ? 'border-red-550 bg-red-25' : ''}
           `}
         >
-          {selectedOption?.text || text}
+          {selectedOption || <span></span>}
           <ChevronDownIcon className="ml-2 h-5 w-5 text-gray-400" aria-hidden="true" />
         </Menu.Button>
 
@@ -62,19 +70,19 @@ const Select = memo(({ id, name, text, errorText, options, showError, className,
             <div className="py-1 overflow-y-auto max-h-80">
               {
                 options.map(option => 
-                  <Menu.Item key={option.text}>
+                  <Menu.Item key={option}>
                     {() => (
                       <span
                         className={`hover:cursor-pointer hover:bg-gray-50 select-none ${classNames(
-                          option.selected ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                          option === selectedOption ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                           'block px-4 py-2 text-sm'
                         )}`}
                         onClick={() => {
                           setSelectedOption(option);
-                          onClick(option.text)
+                          onClick(option)
                         }}
                       >
-                        {option.text}
+                        {option}
                       </span>
                     )}
                   </Menu.Item>

@@ -1,20 +1,35 @@
-import { useCallback, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 import { FieldValues, UseFormClearErrors, UseFormRegister, UseFormSetValue } from "react-hook-form"
 import FormErrorMessage from "../../../../components/form-error-message/FormErrorMessage"
-import OnboardingIllustration, { OnboardingType } from "../../../../components/onboarding-illustration/OnboardingIllustration"
+import OnboardingIllustration from "../../../../components/onboarding-illustration/OnboardingIllustration"
+import { OnboardingType } from "../../../../models/event.model"
 
 type OnboardingMap = Record<OnboardingType, boolean>
 
 type WhereComponentProps = {
   showErrors?: boolean
   onChange?: (onboardingArray: string[]) => void
+  value?: OnboardingType[]
   clearErrors?: UseFormClearErrors<FieldValues>
-  setValue?: UseFormSetValue<FieldValues>
+  setValue: UseFormSetValue<FieldValues>
   register?: UseFormRegister<FieldValues>
 }
 
-const WhereComponent = ({ showErrors, clearErrors, setValue, register }: WhereComponentProps) => {
+const WhereComponent = ({ showErrors, clearErrors, setValue, register, value }: WhereComponentProps) => {
   const [onboardingMap, setOnboardingMap] = useState<OnboardingMap>({ virtual: false, inperson: false })
+
+  useEffect(() => {
+    if (value && value.length > 0) {
+      setOnboardingMap((onboardingMapPrev) => {
+        const onboardingMapUpdated = { ...onboardingMapPrev }
+        for (const val of value) {
+          onboardingMapUpdated[val] = true
+        }
+        return onboardingMapUpdated
+      })
+      setValue('where', value)
+    }
+  }, [value, setValue])
 
   const handleClick = useCallback(
     (valueClicked: OnboardingType) => {
