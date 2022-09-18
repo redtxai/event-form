@@ -9,7 +9,7 @@ describe('Basic Label', () => {
   render(<Label text={controlTestText} htmlFor={controlTestId}/>);
   const labelElement = screen.getByText(controlTestText)
 
-  test('Renders Label', async () => {
+  test('Renders Label', () => {
     expect(labelElement).toBeInTheDocument();
     expect(labelElement).toHaveAttribute('for', controlTestId);
   });
