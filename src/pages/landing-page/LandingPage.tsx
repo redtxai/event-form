@@ -8,7 +8,7 @@ const LandingPage = () => {
   return (
     <section className="flex relative">
       <LandingPageCommunitySidebar></LandingPageCommunitySidebar>
-      <section className="w-full border-l border-gray-150 grow">
+      <section className="w-full grow ml-12 sm:border-l sm:border-gray-150 sm:ml-16">
         <LandingPageHeader></LandingPageHeader>
         <LandingPageBanner></LandingPageBanner>
         <LandingPageBody></LandingPageBody>

@@ -4,8 +4,8 @@ import { Post, posts } from "./posts-mock-data"
 
 const LandingPageFeed = () => {
   const [postsArray] = useState<Post[]>(posts)
-  return <section className="w-full max-w-2-5xl">
-    {postsArray.map((post, index) => <LandingPagePost key={post.id} post={post} className={index > 0 ? 'mt-12' : ''}></LandingPagePost>)}
+  return <section className="w-full max-w-2-5xl pb-6">
+    {postsArray.map((post, index) => <LandingPagePost key={post.id} post={post} className={index > 0 ? 'mt-6 sm:mt-12' : ''}></LandingPagePost>)}
   </section>
 }
 
