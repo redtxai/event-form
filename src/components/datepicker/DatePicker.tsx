@@ -7,7 +7,7 @@ type DatePickerProps = {
   showDateTimeError?: boolean
   showDurationError?: boolean
   clearErrors?: UseFormClearErrors<FieldValues>
-  setValue: UseFormSetValue<FieldValues>
+  setValue?: UseFormSetValue<FieldValues>
   register?: UseFormRegister<FieldValues>
   dateTimeDefaultValue?: string
   durationDefaultValue?: string
@@ -20,14 +20,18 @@ const DatePicker = ({ showDateTimeError, showDurationError, clearErrors, setValu
   useEffect(() => {
     if (dateTimeDefaultValue) {
       setDateTimeValue(dateTimeDefaultValue)
-      setValue('date-time', dateTimeDefaultValue)
+      if (setValue) {
+        setValue('date-time', dateTimeDefaultValue)
+      }
     }
   }, [dateTimeDefaultValue, setValue])
 
   useEffect(() => {
     if (durationDefaultValue) {
       setDurationValue(durationDefaultValue)
-      setValue('duration', durationDefaultValue)
+      if (setValue) {
+        setValue('duration', durationDefaultValue)
+      }
     }
   }, [durationDefaultValue, setValue])
 
@@ -59,8 +63,6 @@ const DatePicker = ({ showDateTimeError, showDurationError, clearErrors, setValu
 
   return (
     <section className="w-full flex sm:justify-between">
-      {showDateTimeError}
-      {showDurationError}
       <Select id="date-time" name="date-time"
         text="Date & time"
         className="max-w-xxxxs sm:max-w-xxs"
