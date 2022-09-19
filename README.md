@@ -41,9 +41,9 @@ Below is the original Project Roadmap, just in case you want to understand how I
 
 ## **Begining**
 
-The project will start with the separation of the tasks. We have two parts of the project: Event Form and Landpage. In the Event Form project we'll have three main kind of tasks: **Micro Components**, **SMS tasks**, **Tests** and **Pages and Form**
+The project will start with the separation of the tasks. We have two parts of the project: Event Form and Landing page. In the Event Form project we'll have three main kind of tasks: **Micro Components**, **SMS tasks**, **Tests** and **Pages and Form**
 
-Regarding the Landpage, I'll leave a task called Landpage tasks and initialization that will be responsible to create the Landpage backbone and then create the tasks.
+Regarding the Landing page, I'll leave a task called Landing page tasks and initialization that will be responsible to create the Landing page backbone and then create the tasks.
 
 ### **Micro Components**
 

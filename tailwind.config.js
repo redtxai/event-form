@@ -11,6 +11,16 @@ module.exports = {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
+
+      // TODO: #16 - customization not working \/ 
+      colors: {
+      'regal-blue': '#243c5a',
+      },
+      letterSpacing: {
+        tightish: '-.015em',
+      },
+      // TODO: #16 - customization not working /\
+      
     },
   },
   plugins: [
