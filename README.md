@@ -1,3 +1,42 @@
+# PROJECT
+## Folder Structure
+
+The folder strucuture is composed by the main src folder and inside there are four folders:
+assets - containing the banner of the Landing page.
+components - containing all Micro components and theirs tests
+models - containig the model file with the model classes
+pages - containing the CreateEdit page(part 1) and the Landing page(part 2)
+
+Inside each pages, you might find a components folder. These components folder is regarding the components specific for each page, so for example, the Landing page has 4 components: LandingPageBanner, LandingPageBody, LandingPageCommunitySidebar and LandingPageHeader. These components are not the Micro components.
+
+## CreateEdit page
+
+The CreateEdit page is the part 1 of the project, and it's basic the same page and when you access via URL the create(http://localhost:3000/create), it'll load the form without date, but if you access via edit URL(http://localhost:3000/edit/:id), the form will load with date. The mock Event data is located inside the create-edit page folder in a file called event-mock-data.ts. You can edit id = 1 to id = 4 Event, the validation is working for Create and Edit, and after you click to submit with no errors, it'll print a console.log in the the console with your data, but your data will not persist on the mock data, if you reload the page, it'll load the original mock data.
+
+## Responsiveness
+
+Both pages are responsive and you can test it.
+
+## Commands
+
+Intallation:
+npm install
+
+Start the project:
+npm start
+
+Tests:
+npm run test
+
+## URL
+
+'/' - is the Landing page
+'/create' - Create page
+'/edit/:id' - Edit page
+
+
+Below is the original Project Roadmap, just in case you want to understand how I was thinking when I start the project. Overall, there are some issues and improvements that could be done, a few of them you can find on the 'issues' session: https://github.com/redtxai/event-form/issues
+
 # PROJECT ROADMAP
 
 ## **Begining**
